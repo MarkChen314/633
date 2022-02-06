@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Reptile Breeding Predictor</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />   
+  </head>
+  <body>
+    
+    <!-- this is the start of content -->
+    <h1>
+      {{ greeting }}
+    </h1>
+    <p>
+      Put something useful here at some point
+    </p>
+    
+    <label for="reptile_species">Reptile Species:</label>
+    <select id="reptile_species">
+      <option value="Bearded Dragon">Bearded Dragon</option>
+      <option value="Uromastyx">Uromastyx</option>
+      <option value="Pacman Frog">Pacman Frog</option>
+    </select>
+    
+    <p/>
+    
+    <button type="submit" onclick="showDiv()">Select Reptile</button>
+    
+    <p/>
+    
+    <div id="colorSelector" style="display:none">
+      <label for="reptileA_colors">Color of first reptile:</label>
+      <select id="reptileA_colors">
+      </select>
+      <p/>
+      <label for="reptileB_colors">Color of second reptile:</label>
+      <select id="reptileB_colors">
+      </select>
+      <p/>
+      <button type="button" onclick="calculate()">Click Me!</button>
+    </div>
+        
+  </body>
+</html>
+
+<script src="scripts/computation.js"></script>

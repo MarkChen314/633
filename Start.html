@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Reptile Breeding Predictor</title>
+
+
+    <script type="text/javascript" src="start.js"></script>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+    <style>
+        .h{
+            position: absolute;
+            top: 40px;
+            left: 700px;
+        }
+        .select_reptile_species{
+            position: absolute;
+            top: 180px;
+            left: 690px;
+            width: 300px;
+            height: 40px;
+
+
+        }
+        .label_reptile_species{
+            position: absolute;
+            top: 170px;
+            left: 900px;
+            width: 300px;
+            height: 40px;
+            color: rebeccapurple;
+            background-color: LightGreen;
+        }
+        .button_reptile_species{
+            position: absolute;
+            top: 270px;
+            left: 750px;
+            width: 400px;
+            height: 40px;
+            background-color: cornflowerblue;
+        }
+        .Generate_Possibilities{
+            position: absolute;
+            top: 350px;
+            left: 690px;
+        }
+        .color_first{
+            position: absolute;
+            top: -5px;
+            left: 200px;
+            width: 300px;
+            height: 30px;
+            color: rebeccapurple;
+            background-color: LightGreen;
+        }
+        .color_second{
+            position: absolute;
+            top: 30px;
+            left: 200px;
+            width: 300px;
+            height: 30px;
+            color: rebeccapurple;
+            background-color: LightGreen;
+        }
+        .button_Generate_Possibilities{
+            position: absolute;
+            top: 100px;
+            left: 60px;
+            width: 400px;
+            height: 40px;
+            background-color: cornflowerblue;
+        }
+        .result{
+            position: absolute;
+            top: 550px;
+            left: 777px;
+            width: 400px;
+            height: 150px;
+            background-color: aquamarine;
+        }
+        .button_Clear{
+            position: absolute;
+            top: 750px;
+            left: 750px;
+            width: 400px;
+            height: 40px;
+            background-color: cornflowerblue;
+        }
+        .image1{
+            position: absolute;
+            top: 50px;
+            left: 100px;
+            width: 300px;
+            height: 200px;
+        }
+        .image2{
+            position: absolute;
+            top: 280px;
+            left: 100px;
+            width: 300px;
+            height: 200px;
+        }
+        .image3{
+            position: absolute;
+            top: 510px;
+            left: 100px;
+            width: 300px;
+            height: 200px;
+        }
+        .image4{
+            position: absolute;
+            top: 50px;
+            left: 1500px;
+            width: 300px;
+            height: 200px;
+        }
+        .image5{
+            position: absolute;
+            top: 280px;
+            left: 1500px;
+            width: 300px;
+            height: 200px;
+        }
+        .image6{
+            position: absolute;
+            top: 510px;
+            left: 1500px;
+            width: 300px;
+            height: 200px;
+        }
+
+    </style>
+</head>
+<body onload="populateReptileDropdown()" style = "background-color : green">
+
+
+<!-- this is the start of content -->
+
+<h1 class="h">
+    Reptile Breeding Predictor:
+</h1>
+
+<!-- Populated on page load -->
+<label class="select_reptile_species" for="reptile_species">Reptile Species:</label>
+<select class="label_reptile_species" id="reptile_species">
+</select>
+
+<button class="button_reptile_species" type="submit" onclick="showColorsDiv()">Select Reptile</button>
+
+
+
+<!-- Selects below are populated with options depending on the reptile species selected above. -->
+<div id="colorSelector" style="display:none" class="Generate_Possibilities">
+    <label for="reptileA_colors">Color of first reptile:</label>
+    <select id="reptileA_colors" class = "color_first">
+    </select>
+    <p/>
+    <label for="reptileB_colors" >Color of second reptile:</label>
+    <select id="reptileB_colors" class="color_second" >
+    </select>
+    <p/>
+    <button type="button" onclick="calculateGenetics()" class="button_Generate_Possibilities">Generate Possibilities</button>
+</div>
+
+<!-- Results -->
+<div id="results" style="display:none" class="result">
+</div>
+
+<!-- Clear button -->
+<div id="clear" style="display:none">
+    <button class="button_Clear" type="button" onclick="clearPage()">Clear Page</button>
+</div>
+<div>
+    <img src="https://s2.loli.net/2022/02/04/WGF6w2as4L8AHUB.jpg" class="image1">
+    <img src="https://s2.loli.net/2022/02/04/FyhYK3UVfomNJb9.jpg" class="image2">
+    <img src="https://s2.loli.net/2022/02/04/96HzxN3JvthZEPY.jpg" class="image3">
+    <img src="https://s2.loli.net/2022/02/04/3jc7fp8ONKT6MRE.jpg" class="image4">
+    <img src="https://s2.loli.net/2022/02/04/6qbMkVfJRhoaEcd.jpg" class="image5">
+    <img src="https://s2.loli.net/2022/02/04/AtEYgM3vRSxIkZW.jpg" class="image6">
+
+</div>
+</body>
+</html>
